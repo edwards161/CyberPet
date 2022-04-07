@@ -16,7 +16,7 @@ class Animal {
 dogImage.addEventListener("click", () => {
     choosePet.style.display = "none";
     petUI.style.display = "flex";
-    petImg.src = "images/Spike_Dog.png";
+    petImg.src = "images/Tom_and_Jerry_eeZee_029.webp";
 })
 
 catImage.addEventListener("click", () => {
