@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(images/tom-jerry-background.webp) no-repeat; 
+    height:cover;
+}
+
+#choosePet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30vh;
+}
+
+img {
+    width : 200px;    
+}
+
+.pets {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#petUI {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    flex-direction: column;
+}
+
+#petImg {
+}
+
+#buttons {
+    margin-top: 25px;
+}
+
+#newPet {
+    margin-top: 25px;
+}
+
+#newPet:hover {
+    color: red;
+}
+
+img:hover {
+    width: 300px;
+}
