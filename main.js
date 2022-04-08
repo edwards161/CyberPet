@@ -43,7 +43,7 @@ class Animal {
 
     wash() {
         happinessBar.value -= 10;
-        petResponse.textContent = ""
+        petResponse.textContent = "They hate washing!"
     }
 }
 
@@ -59,6 +59,7 @@ class Cat extends Animal {
         play(){
             happinessBar.value -= 10;
             petResponse.textContent = "Tom does not want to be disturbed!"
+            petImg.src = "images/sleepy-tom-512x512.png"
         }
     }
     
@@ -107,4 +108,4 @@ washBtn.addEventListener("click", () => {
 
 newPet.addEventListener("click", () => {
     window.location.reload()
-    });
+    })
