@@ -6,8 +6,8 @@ const mouseImage = document.getElementById("mouseImage");
 const happinessBar = document.querySelector("#happinessBar");
 //Buttons
 const playBtn = document.querySelector("#playBtn");
-const feedBtn = document.getElementById('#feedBtn');
-const washBtn = document.getElementById('#washBtn');
+const feedBtn = document.querySelector('#feedBtn');
+const washBtn = document.querySelector('#washBtn');
 //Starting state of webpage elements
 choosePet.style.display = "flex";
 petUI.style.display = "none";
@@ -29,9 +29,11 @@ const decreaseHappiness = () => {
 
 class Animal {
     constructor(name){
+        this._name = 
         this._hunger = 50;
         this._happiness = 50;
         this._tiredness = 50;
+        this._favFood = "";
     }
 
     feed() {
@@ -48,21 +50,23 @@ class Animal {
 class Mouse extends Animal {
         play () {
             happinessBar.value += 10;
-            petEmotion.textContent = "Jerry loves to play... as long as there's no mouse traps involved!"
+            petResponse.textContent = "Jerry loves to play... as long as there's no mouse traps involved!"
         }
     }
 
 class Cat extends Animal {
+
         play(){
             happinessBar.value -= 10;
-            /*petEmotion.textContent = "Tom does not want to be disturbed"*/
+            petResponse.textContent = "Tom does not want to be disturbed!"
         }
     }
     
 class Dog extends Animal {
+
         play(){
             happinessBar.value -= 20;
-            petEmotion.textContent = "Spike hates playing!"
+            petResponse.textContent = "Spike hates playing!"
         }
     }
 
@@ -93,6 +97,13 @@ playBtn.addEventListener("click", () => {
     pet.play();
 })
 
+feedBtn.addEventListener("click", () => {
+    pet.feed();
+})
+
+washBtn.addEventListener("click", () => {
+    pet.wash();
+})
 
 newPet.addEventListener("click", () => {
     window.location.reload()
