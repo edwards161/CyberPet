@@ -38,7 +38,7 @@ class Animal {
 
     feed() {
         happinessBar.value += 15;
-        petResponse.textContent = ""
+        petResponse.textContent = "FOOOOOD"
     }
 
     wash() {

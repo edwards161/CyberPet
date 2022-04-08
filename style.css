@@ -126,3 +126,8 @@ progress[value] {
     border-radius: 5px;
   }
   
+  #petStatus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
