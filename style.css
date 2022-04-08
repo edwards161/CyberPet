@@ -56,7 +56,6 @@ img:hover {
 progress[value] {
     display: inline-block;
     -webkit-appearance: none;
-    appearance: none;
   }
   
   progress[value]::-webkit-progress-bar {
