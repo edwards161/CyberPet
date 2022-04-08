@@ -38,12 +38,12 @@ class Animal {
 
     feed() {
         happinessBar.value += 15;
-        petResponse.textContent = "FOOOOOD"
+        petResponse.textContent = "mmmm...FOOOOOD!!!"
     }
 
     wash() {
         happinessBar.value -= 10;
-        petResponse.textContent = "They hate washing!"
+        petResponse.textContent = "I hate Bath Time!"
     }
 }
 
