@@ -12,17 +12,25 @@ body {
 @font-face {
     font-family: tAndJ;
     src: url(font/Shermlock.ttf);
-}
+    }
   
 h1 {
     font-family: tAndJ;
     color: rgb(0, 47, 255);
+    font-size: 100pt;
 }
 
 p {
     font-family: tAndJ;
     color: red;
+    font-size: xx-large;
 }
+
+button {
+    font-family: tAndJ;
+    color: red;
+}
+
 
 #choosePet {
     display: flex;
