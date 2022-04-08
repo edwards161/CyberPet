@@ -52,7 +52,7 @@ class Animal {
         petResponse.textContent = `mmmm...FOOOOOD!!!`
         if (this._hunger >= 80) {
             petResponse.textContent = `${pet._name} is not hungry anymore.`}
-            petImg.src = `/images/${pet._name}-${pet._mood}.png`
+            petImg.src = `images/${pet._name}-${pet._mood}.png`
         }
     
 
@@ -61,7 +61,7 @@ class Animal {
         this._hunger -= 20;
         this._mood = "angry";
         petResponse.textContent = `${pet._name} hates Bath Time`
-        petImg.src = `/images/${pet._name}-${pet._mood}.png`
+        petImg.src = `images/${pet._name}-${pet._mood}.png`
     }
 }
 
@@ -74,7 +74,7 @@ class Mouse extends Animal {
             happinessBar.value += 10;
             this._hunger +=10;
             petResponse.textContent = "Jerry loves to play... as long as there's no mouse traps involved!"
-            petImg.src = "/images/jerry-play.png"
+            petImg.src = "images/jerry-play.png"
         }
     }
 
@@ -86,7 +86,7 @@ class Cat extends Animal {
         play(){
             happinessBar.value -= 10;
             petResponse.textContent = "Tom does not want to be disturbed!"
-            petImg.src = "/images/sleepy-tom-512x512.png"
+            petImg.src = "images/sleepy-tom-512x512.png"
         }
     }
     
@@ -98,13 +98,13 @@ class Dog extends Animal {
         play(){
             happinessBar.value -= 20;
             petResponse.textContent = "Spike barks!"
-            petImg.src = "/images/spike-play.png"
+            petImg.src = "images/spike-play.png"
         }
     }
 
 mouseImage.addEventListener("click", () => {
     petDisplay();
-    petImg.src = "/images/Jerry_Mouse.png";
+    petImg.src = "images/Jerry_Mouse.png";
     pet = new Mouse();
     decreaseHappiness();
 })
@@ -112,7 +112,7 @@ mouseImage.addEventListener("click", () => {
 dogImage.addEventListener("click", () => {
     choosePet.style.display = "none";
     petUI.style.display = "flex";
-    petImg.src = "/images/Tom_and_Jerry_eeZee_029.webp";
+    petImg.src = "images/Tom_and_Jerry_eeZee_029.webp";
     pet = new Dog();
     decreaseHappiness()
 })
@@ -120,7 +120,7 @@ dogImage.addEventListener("click", () => {
 catImage.addEventListener("click", () => {
     choosePet.style.display = "none";
     petUI.style.display = "flex";
-    petImg.src = "/images/Tom_Cat.webp";
+    petImg.src = "images/Tom_Cat.webp";
     pet = new Cat();
     decreaseHappiness()
 })
