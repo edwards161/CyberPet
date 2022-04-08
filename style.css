@@ -16,20 +16,27 @@ body {
   
 h1 {
     font-family: tAndJ;
-    color: rgb(0, 47, 255);
+    color: red;
     font-size: 100pt;
+    text-shadow: 2px 4px yellow
+    
 }
 
 p {
     font-family: tAndJ;
-    color: red;
-    font-size: xx-large;
+    color: rgba(55, 0, 255, 0.836);
+    font-size: 30pt;
+    text-shadow: 2px 4px yellow
 }
 
 button {
     font-family: tAndJ;
+    background-color: green;
+    border-radius: 25%;
     color: red;
     font-size: 50pt;
+    text-shadow: 2px 4px yellow;
+    padding: 20px
 }
 
 
@@ -53,9 +60,13 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 30vh;
     flex-direction: column;
 }
+
+/* .petMood {
+    color: darkorchid;
+} */
 
 #petImg {
     width: 200px;
@@ -63,6 +74,27 @@ img {
 
 #buttons {
     margin-top: 25px;
+
+}
+
+#playBtn:hover {
+    background-color: #4c87af;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 50%;
+}
+
+#feedBtn:hover {
+    background-color: #4c87af;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 50%;
+}
+
+
+#washBtn:hover {
+    background-color: #4c87af;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 50%;
+
 }
 
 #newPet {
