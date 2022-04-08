@@ -68,7 +68,7 @@ class Animal {
 class Mouse extends Animal {
     constructor(name){
         super(name)
-        this._name = "Jerry";
+        this._name = "jerry";
     }
         play () {
             happinessBar.value += 10;
@@ -81,7 +81,7 @@ class Mouse extends Animal {
 class Cat extends Animal {
     constructor(name){
         super(name)
-        this._name = "Tom";
+        this._name = "tom";
     }
         play(){
             happinessBar.value -= 10;
@@ -93,7 +93,7 @@ class Cat extends Animal {
 class Dog extends Animal {
     constructor(name){
         super(name)
-        this._name = "Spike";
+        this._name = "spike";
     }
         play(){
             happinessBar.value -= 20;
