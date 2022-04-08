@@ -108,4 +108,4 @@ washBtn.addEventListener("click", () => {
 
 newPet.addEventListener("click", () => {
     window.location.reload()
-    });
+    })
