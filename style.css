@@ -34,6 +34,7 @@ img {
 }
 
 #petImg {
+    width: 200px;
 }
 
 #buttons {
@@ -51,3 +52,21 @@ img {
 img:hover {
     width: 300px;
 }
+
+progress[value] {
+    display: inline-block;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+  
+  progress[value]::-webkit-progress-value {
+    background: forestgreen;
+    border-radius: 5px;
+  }
+  

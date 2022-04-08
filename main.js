@@ -1,43 +1,23 @@
+//Images the user can interact with
 const dogImage = document.getElementById("dogImage");
 const catImage = document.getElementById("catImage");
-
-
+const mouseImage = document.getElementById("mouseImage");
+//Pet Elements
+const happinessBar = document.querySelector("#happinessBar");
 //Buttons
-const  playBtn = document.getElementById("#playBtn")
-const feedBtn = document.getElementById('#feedBtn')
-const washBtn = document.getElementById('#washBtn')
-
+const playBtn = document.querySelector("#playBtn");
+const feedBtn = document.getElementById('#feedBtn');
+const washBtn = document.getElementById('#washBtn');
+//Starting state of webpage elements
 choosePet.style.display = "flex";
 petUI.style.display = "none";
+//variables that will be updated
 
-const ownerName = () => {
+
+const petDisplay = () => {
+    choosePet.style.display = "none";
+    petUI.style.display = "flex";
 }
-
-
-dogImage.addEventListener("click", () => {
-    choosePet.style.display = "none";
-    petUI.style.display = "flex";
-    petImg.src = "images/Spike_Dog.png";
-    decreaseHappiness()
-})
-
-catImage.addEventListener("click", () => {
-    choosePet.style.display = "none";
-    petUI.style.display = "flex";
-    petImg.src = "images/Tom_Cat.webp";
-    decreaseHappiness()
-})
-
-mouseImage.addEventListener("click", () => {
-    choosePet.style.display = "none";
-    petUI.style.display = "flex";
-    petImg.src = "images/Jerry_Mouse.png";
-    decreaseHappiness()
-})
-
-newPet.addEventListener("click", () => {
-    window.location.reload()
-    });
 
 const decreaseHappiness = () => {
     const intervalId = setInterval(reduceBar, 1000);
@@ -49,14 +29,13 @@ const decreaseHappiness = () => {
 
 class Animal {
     constructor(name){
-        this._name = name;
         this._hunger = 50;
         this._happiness = 50;
         this._tiredness = 50;
     }
 
     feed() {
-        happinessBar.value += 25;
+        happinessBar.value += 15;
         petResponse.textContent = ""
     }
 
@@ -66,30 +45,59 @@ class Animal {
     }
 }
 
-
 class Mouse extends Animal {
-    constructor(name) {
-        play (); {
+        play () {
             happinessBar.value += 10;
             petEmotion.textContent = "Jerry loves to play... as long as there's no mouse traps involved!"
         }
     }
-}
 
 class Cat extends Animal {
-    constructor(name) {
-        play(); {
+        play(){
             happinessBar.value -= 10;
-            petEmotion.textContent = "Tom does not want to be disturbed"
+            /*petEmotion.textContent = "Tom does not want to be disturbed"*/
         }
     }
-}
-
+    
 class Dog extends Animal {
-    constructor(name) {
-        play(); {
-            happinessBar.value -= 10;
+        play(){
+            happinessBar.value -= 20;
             petEmotion.textContent = "Spike hates playing!"
         }
     }
-}
+
+mouseImage.addEventListener("click", () => {
+    petDisplay();
+    petImg.src = "images/Jerry_Mouse.png";
+    pet = new Mouse();
+    decreaseHappiness();
+})
+
+dogImage.addEventListener("click", () => {
+    choosePet.style.display = "none";
+    petUI.style.display = "flex";
+    petImg.src = "images/Spike_Dog.png";
+    pet = new Dog();
+    decreaseHappiness()
+})
+
+catImage.addEventListener("click", () => {
+    choosePet.style.display = "none";
+    petUI.style.display = "flex";
+    petImg.src = "images/Tom_Cat.webp";
+    pet = new Cat();
+    decreaseHappiness()
+})
+
+playBtn.addEventListener("click", () => {
+    pet.play();
+})
+
+
+newPet.addEventListener("click", () => {
+    window.location.reload()
+    });
+
+
+
+
